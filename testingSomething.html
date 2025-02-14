@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="testingSomething.css">
+    </head>
+        <body>
+            <div id="wholeContainer" class="container">
+                <!--inner html = canvas and in canvas the function to draw x or o gets called-->
+                <button id="grid1" class="grid grid-1" onclick="show()">1</button>
+                <button id="grid2" class="grid grid-2" onclick="showTest()">2</button>
+                <button id="grid3" class="grid grid-3" onclick="show()">3</button>
+                <button id="grid4" class="grid grid-4" onclick="show()">4</button>
+                <button id="grid5" class="grid grid-5" onclick="show()">5</button>
+                <button id="grid6" class="grid grid-6" onclick="show()">6</button>
+                <button id="grid7" class="grid grid-7" onclick="show()">7</button>
+                <button id="grid8" class="grid grid-8" onclick="show()">8</button>
+                <button id="grid9" class="grid grid-9" onclick="show()">9</button>
+                
+            </div>
+                <img id="image" src="" />  
+
+            <button type="button" onclick="show()" id="btnID">
+                Show Image
+            </button>
+            <script>
+
+                function showTest() {
+                    let image = document.getElementById("image");
+                    image.innerHTML="<img src='red_x.png'>";                    
+                }
+                function show() {
+                    let image = document.getElementById("image");
+                    image.src = "red_x.png"
+                    document.getElementByClass("grid")
+                        .style.display = "none";
+                    }
+/*
+                //call x or o drawing function in innerHTML
+                document.getElementById('grid1').innerHTML += '<canvas id="canvas1" width="50" height="50"></canvas>'
+                var ctx = document.getElementById("canvas1").getContext("2d");
+                ctx.strokeStyle = "red";
+                ctx.beginPath();
+                ctx.moveTo(0,25);
+                ctx.lineTo(50,25);
+                ctx.stroke();
+*/
+            </script>
+        </body>
+</html>
